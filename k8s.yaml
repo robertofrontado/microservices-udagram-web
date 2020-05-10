@@ -15,7 +15,7 @@ spec:
   selector:
     app: udagram-web
   sessionAffinity: None
-  type: ClusterIP
+  type: LoadBalancer
 status:
   loadBalancer: {}
     
@@ -44,10 +44,4 @@ spec:
         ports:
         - containerPort: 80
         imagePullPolicy: Always
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 80
-          initialDelaySeconds: 3
-          periodSeconds: 3
             
