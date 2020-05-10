@@ -19,7 +19,7 @@ RUN npm install
 COPY . .
 
 # Build
-RUN ionic build
+RUN ionic build --prod
 
 # Static website
 FROM nginx:alpine
