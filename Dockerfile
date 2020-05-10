@@ -24,4 +24,6 @@ RUN ionic build --prod
 # Static website
 FROM nginx:alpine
 
+EXPOSE 80
+
 COPY --from=builder /usr/src/app/www /usr/share/nginx/html
